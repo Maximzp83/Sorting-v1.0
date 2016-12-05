@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Сортировка</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+</head>
+<body>
+ <div class="wrapper">
+	<header>
+		<div>СОРТИРОВКА ЭЛЕМЕНТОВ</div>
+	</header>
+<!-- =====================Ввод данных============== -->
+	<section class="section-input">
+		<div class="main-input">
+			<div class="center-container">
+				<div class="quantity column">				
+					<div class="block-title">Количество<br> сортируемых элементов</div>
+					<input class="input-box" type="text" name="quantity">
+				</div>
+				<div class="range">	
+					<div class="top-block-title column">Диапазон сортируемых чисел</div>
+					<div class="min-range-block column">
+						<div class="block-title">От</div>
+						<input class="input-box" type="text" name="min-range-input">
+					</div>
+					<div class="max-range-block column">
+						<div class="block-title">До</div>
+						<input class="input-box" type="text" name="max-range-input" >
+					</div>
+				</div>
+			</div>
+			<div class="button-block">
+				<button type="submit" name="generate-button" onclick="clickGenerateButton()">Generate</button>
+			</div>
+		</div>
+	<!-- ===========Поля выбора методов===========	 -->
+		<div class="method-container">
+			<div class="method-block column">
+				<div class="block-title">Метод сортировки</div>
+				<div class="select-container">
+					<select class="sort-method" name="method-list" size="1">
+						<option>Сортировка Выбором</option>
+						<option>Быстрая Сортировка</option>
+					</select>
+				</div>
+			</div>
+			<div class="method-block column">
+				<div class="block-title">Как сортировать</div>
+				<div class="select-container">
+					<select class="sort-method" name="process-list" size="1">
+						<option>по убыванию</option>
+						<option>по возрастанию</option>
+					</select>
+				</div>
+			</div>
+			<div class="button-block">
+				<button type="submit" name="sort-button" onclick="clickSortButton()">SORT!</button>
+			</div>
+		</div>
+	</section>
+<!-- =====================Вывод сгенерированных элементов======== -->
+	<section class="section-elements-array">
+		<div class="block-title">Сортируемые элементы</div>
+		<div id ="elementsContainer"></div>
+	</section>
+<!-- =====================Вывод сортируемых элементов======== -->
+	<section class="section-sorted-elements">
+		<div class="block-title">Результат сортировки</div>
+		<div id="resultElementsContainer"></div>
+	</section>
+</div>
+
+ <script src="js/script.js" async></script>
+</body>
+</html>
+
+
