@@ -1,64 +1,48 @@
-html {
-	height: 100%;
-}
-
 body {
 	margin: 0 auto;
 	padding: 0;
-	background:  url('../image/background.jpg') ;;
-	font-size: 14px;
+	background:  url('../image/457776675.jpg') ;
+	background-size: cover;
+	font: 14px 'Ubuntu';
 	box-sizing: border-box;
-	/*height: 100%;*/
 }
 
 
 
-.alert {
+.alert,
+.alert-big {
 	position: absolute;
 	top: 35%;
 	left: 41%; 
 	width: 300px;
 	height: 120px;
 	background-color: #eee;
-	font-size: 25px;
-	color: red;
+	font-size: 24px;
+	color: #bd0000;
 	text-align: center;
-	line-height: 40px;
+	line-height: 35px;
 	padding: 20px 10px;
 	z-index: 100;
-	border: 1px double red;
+	border: 1px double #6e4367;
 	cursor: pointer;
 }
 
 .alert-big {
-	position: absolute;
-	top: 35%;
-	left: 41%; 
-	width: 300px;
-	height: 150px;
-	background-color: #eee;
-	font-size: 25px;
-	color: red;
-	text-align: center;
-	line-height: 40px;
-	padding: 20px 10px;
-	z-index: 100;
-	border: 1px double red;
-	cursor: pointer;
-}
+	height: 180px;
+}	
 
 .shadow { 
 	box-shadow: 3px 3px 10px rgba(0,0,0,0.50); 
 }
 
 .alert span {
-	color: #000;
+	color: #de7789;
 	font-size: 18px;
 	line-height: 80px;
 }
 
 .alert-big span {
-	color: #000;
+	color: #de7789;
 	font-size: 18px;
 	line-height: 60px;
 }
@@ -86,25 +70,59 @@ button {
 
 /*---------------------------------*/
 
-header {
-	height: 80px;
+h1 {
 	text-align: center;
-	line-height: 80px;
-	font-size: 36px;
-	color: #3e95f5;
-	text-decoration: underline;
+	font: bold 36px 'Ubuntu';
+	-webkit-animation-name: colorchange;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-iteration-count: 100;
+	-moz-animation-name: colorchange;
+	-moz-animation-duration: 5s;
+	-moz-animation-iteration-count: 100;
+	-o-animation-name: colorchange;
+	-o-animation-duration: 5s;
+	-o-animation-iteration-count: 100;
+	animation-name: colorchange;
+	animation-duration: 5s;
+	animation-iteration-count: 100;
 }
 
-.block-title {
-	text-align: center;
-	font-size: 28px;
+@-webkit-keyframes colorchange {
+	0% {color: white; /*font-size: 37px;*/}
+	25% {color: #bb7f81; /*font-size: 38px;*/}
+	50% {color: #6b4167; /*font-size: 39px;*/}
+	100% {color: #3c2252; /*font-size: 40px;*/}
+}
+@-moz-keyframes colorchange {
+	0% {color: white; /*font-size: 37px;*/}
+	25% {color: #bb7f81; /*font-size: 38px;*/}
+	50% {color: #6b4167; /*font-size: 39px;*/}
+	100% {color: #3c2252; /*font-size: 40px;*/}
+}
+@-o-keyframes colorchange {
+	0% {color: white; /*font-size: 37px;*/}
+	25% {color: #bb7f81; /*font-size: 38px;*/}
+	50% {color: #6b4167; /*font-size: 39px;*/}
+	100% {color: #3c2252; /*font-size: 40px;*/}
+}
+
+@keyframes colorchange {
+	0% {color: white; /*font-size: 37px; margin: 20px 0;*/}
+	25% {color: #bb7f81; /*font-size: 38px; margin: 19px 0;*/ }
+	50% {color: #6b4167; /*font-size: 39px; margin: 18px 0;*/ }
+	100% {color: #3c2252; /*font-size: 40px; margin: 17px 0;*/ }
 }
 
 .column {
-	font-size: 25px;
 	text-align: center;
 }
 
+h2 {
+	text-align: center;
+	color: #20153c;
+}
+
+/*---------Поля для ввода--------------*/
 .main-input {
 	display: flex;
 	position: relative;
@@ -114,7 +132,7 @@ header {
 
 .main-input .center-container {
 	display: flex;
-	align-items: flex-end
+	align-items: flex-end;
 }
 
 .center-container {
@@ -126,32 +144,47 @@ header {
 	margin: 0 5px; 
 }
 
-.range .top-block-title {
-	padding-left: 15px;
-}
-
 .range .min-range-block,
 .range .max-range-block {
 	display: inline-block;
 	margin: 0 10px; 
 }
 
+.center-container .quantity_left {
+	margin: 0 50px 0 10px;
+}
 
-/*-----------------------------*/
+.center-container .range {
+	margin-left: 120px;
+}
+
 
 .input-box {
 	margin-top: 10px;
 	width: 100px;
-	height: 50px;
-	font-size: 25px;
+	height: 35px;
+	font-size: 22px;
 	text-align: center;
-	background-color: #eee;
-	border-style: ridge;
+	background-color: #d6f1fd;
+	//border-style: ridge;
 	border-radius: 15px; 
 }
 
 .input-box:focus {
-	box-shadow: 0px 2px 10px rgba(0,0,0,0.40);
+	box-shadow: -1px 6px 10px rgba(0,0,0,0.40);
+}
+
+p {
+	text-align: center;
+	font-size: 22px;
+	color: #ffffff;
+	margin: 5px 0px;
+}
+
+p.position_p {
+	display: inline-block;
+    margin-top: 5px;
+    margin-right: 5px;
 }
 
 .button-block {
@@ -162,18 +195,18 @@ header {
 
 button[name="generate-button"]:hover,
 button[name="sort-button"]:hover {
-	color: #33a419;
-	box-shadow: 0px 2px 10px rgba(0,0,0,0.50);
+	color: #4008d2;
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.50);
 }
 
 button[name="sort-button"],
 button[name="generate-button"] {
-	width: 90px;
-	height: 60px;
-	border-radius: 50%;
+	width: 120px;
+	height: 50px;
+	border-radius: 15px;
 	border-style: none;
 	background: radial-gradient(circle at 65% 15%, #fefbf2, #817f7e);
-	color: #404711;
+	color: #20153c;
 	font-size: 20px;
 }
 
@@ -188,6 +221,7 @@ button[name="generate-button"]:active {
 }
 
 /*---------Методы-------------*/
+
 .section-method-input {
 	margin-top: 50px;
 }
@@ -196,7 +230,7 @@ button[name="generate-button"]:active {
 	opacity: 0;
 	visibility: hidden; 
 	position: relative;
-	margin-top: 40px;
+	margin-top: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
@@ -214,26 +248,26 @@ button[name="generate-button"]:active {
 
 .select-container {
 	position: relative;
-	width: 280px;
+	//width: 280px;
+	
 }
 
 .select-container .sort-method {
 	margin-top: 10px;
 	padding-left: 10px;
 	width: 280px;
-	height: 54px;
-	font-size: 22px;
-	border-style: ridge;
+	height: 45px;
+	font-size: 20px;
 	border-radius: 15px;
+	background-color: #d6f1fd;
 	background: url('../image/arrow2.png') no-repeat;
-	background-position: -50px 0px;
 	background-size: cover;
 	-webkit-appearance: none;
     -moz-appearance: none;
 }
 
 .select-container .sort-method:focus {
-	box-shadow: 0px 2px 10px rgba(0,0,0,0.50);
+	box-shadow: -1px 6px 10px rgba(0,0,0,0.40);
 }
 
 /*--------Элементы-----------------*/
@@ -241,7 +275,7 @@ button[name="generate-button"]:active {
 .section-elements-array,
 .section-sorted-elements {
 	width: 100%;
-	margin-top: 60px;
+	margin-top: 40px;
 }
 
 .section-elements-array {
@@ -267,6 +301,7 @@ button[name="generate-button"]:active {
     -moz-transition: opacity 0.7s ease-in-out;
     -o-transition: opacity 0.7s ease-in-out;
     transition: opacity 0.7s ease-in-out;
+    margin-bottom: 35px;
 }
 
 #resultElementsContainer {
@@ -287,11 +322,12 @@ button[name="generate-button"]:active {
 	border-radius: 50%;
 	background: radial-gradient(circle at 65% 15%, #fefbf2, #ab0f0f);
 	opacity: 0;
-	box-shadow: -3px 7px 9px rgba(0,0,0,0.50);
+	box-shadow: -3px 5px 8px rgba(0,0,0,0.25);
 }
 
 .sorted {
 		background: radial-gradient(circle at 65% 15%, #fefbf2, #208a39);
 }
+
 
 

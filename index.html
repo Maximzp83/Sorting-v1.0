@@ -3,29 +3,30 @@
 <head>
 	<title>Сортировка</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 </head>
 <body>
  <div class="wrapper">
-	<header>
-		<div>СОРТИРОВКА ЭЛЕМЕНТОВ</div>
-	</header>
+ <header>
+	<h1>СОРТИРОВКА ЭЛЕМЕНТОВ</h1>
+ </header>
 <!-- =====================Ввод данных============== -->
 	<section class="section-input">
 		<div class="main-input">
 			<div class="center-container">
-				<div class="quantity column">				
-					<div class="block-title">Количество<br> сортируемых элементов</div>
+				<div class="quantity_left column">				
+					<p>Количество</p>
 					<input class="input-box" type="text" name="quantity">
 				</div>
 				<div class="range">	
-					<div class="top-block-title column">Диапазон сортируемых чисел</div>
-					<div class="min-range-block column">
-						<div class="block-title">От</div>
+					<p>Диапазон сортируемых чисел</p>
+					<div class="min-range-block">
+						<p class="position_p">от</p>
 						<input class="input-box" type="text" name="min-range-input">
 					</div>
-					<div class="max-range-block column">
-						<div class="block-title">До</div>
+					<div class="max-range-block">
+						<p class="position_p">до</p>
 						<input class="input-box" type="text" name="max-range-input" >
 					</div>
 				</div>
@@ -36,8 +37,8 @@
 		</div>
 	<!-- ===========Поля выбора методов===========	 -->
 		<div class="method-container">
-			<div class="method-block column">
-				<div class="block-title">Метод сортировки</div>
+			<div class="method-block">
+				<p>Метод сортировки</p>
 				<div class="select-container">
 					<select class="sort-method" name="method-list" size="1">
 						<option>Сортировка Выбором</option>
@@ -45,8 +46,8 @@
 					</select>
 				</div>
 			</div>
-			<div class="method-block column">
-				<div class="block-title">Как сортировать</div>
+			<div class="method-block">
+				<p>Как сортировать</p>
 				<div class="select-container">
 					<select class="sort-method" name="process-list" size="1">
 						<option>по убыванию</option>
@@ -54,19 +55,19 @@
 					</select>
 				</div>
 			</div>
-			<div class="button-block">
-				<button type="submit" name="sort-button" onclick="clickSortButton()">SORT!</button>
+				<div class="button-block">
+					<button type="submit" name="sort-button" onclick="clickSortButton()">SORT!</button>
+				</div>
 			</div>
-		</div>
 	</section>
 <!-- =====================Вывод сгенерированных элементов======== -->
 	<section class="section-elements-array">
-		<div class="block-title">Сортируемые элементы</div>
+		<h2>Сортируемые элементы</h2>
 		<div id ="elementsContainer"></div>
 	</section>
 <!-- =====================Вывод сортируемых элементов======== -->
 	<section class="section-sorted-elements">
-		<div class="block-title">Результат сортировки</div>
+		<h2>Результат сортировки</h2>
 		<div id="resultElementsContainer"></div>
 	</section>
 </div>
