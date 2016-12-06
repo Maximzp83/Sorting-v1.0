@@ -7,10 +7,9 @@ body {
 	box-sizing: border-box;
 }
 
-
-
 .alert,
 .alert-big {
+	display: none;
 	position: absolute;
 	top: 35%;
 	left: 41%; 
@@ -69,8 +68,21 @@ button {
 }
 
 /*---------------------------------*/
+header {
+	height: 50px;
+	margin: 25px 0;
+}
 
-h1 {
+header > div {
+	position: relative;
+	min-width: 515px;
+	display: flex;
+	justify-content: center;
+}
+
+.main-title {
+	margin: 5px 0 0 0;
+	position: absolute;
 	text-align: center;
 	font: bold 36px 'Ubuntu';
 	-webkit-animation-name: colorchange;
@@ -88,29 +100,29 @@ h1 {
 }
 
 @-webkit-keyframes colorchange {
-	0% {color: white; /*font-size: 37px;*/}
-	25% {color: #bb7f81; /*font-size: 38px;*/}
-	50% {color: #6b4167; /*font-size: 39px;*/}
-	100% {color: #3c2252; /*font-size: 40px;*/}
+	0% {color: white; font-size: 37px;}
+	25% {color: #bb7f81; font-size: 38px;}
+	50% {color: #6b4167; font-size: 39px;}
+	100% {color: #3c2252; font-size: 40px;}
 }
 @-moz-keyframes colorchange {
-	0% {color: white; /*font-size: 37px;*/}
-	25% {color: #bb7f81; /*font-size: 38px;*/}
-	50% {color: #6b4167; /*font-size: 39px;*/}
-	100% {color: #3c2252; /*font-size: 40px;*/}
+	0% {color: white; font-size: 37px;}
+	25% {color: #bb7f81; font-size: 38px;}
+	50% {color: #6b4167; font-size: 39px;}
+	100% {color: #3c2252; font-size: 40px;}
 }
 @-o-keyframes colorchange {
-	0% {color: white; /*font-size: 37px;*/}
-	25% {color: #bb7f81; /*font-size: 38px;*/}
-	50% {color: #6b4167; /*font-size: 39px;*/}
-	100% {color: #3c2252; /*font-size: 40px;*/}
+	0% {color: white; font-size: 37px;}
+	25% {color: #bb7f81; font-size: 38px;}
+	50% {color: #6b4167; font-size: 39px;}
+	100% {color: #3c2252; font-size: 40px;}
 }
 
 @keyframes colorchange {
-	0% {color: white; /*font-size: 37px; margin: 20px 0;*/}
-	25% {color: #bb7f81; /*font-size: 38px; margin: 19px 0;*/ }
-	50% {color: #6b4167; /*font-size: 39px; margin: 18px 0;*/ }
-	100% {color: #3c2252; /*font-size: 40px; margin: 17px 0;*/ }
+	0% {color: white; font-size: 37px; }
+	25% {color: #bb7f81; font-size: 38px;  }
+	50% {color: #6b4167; font-size: 39px;  }
+	100% {color: #3c2252; font-size: 40px;  }
 }
 
 .column {

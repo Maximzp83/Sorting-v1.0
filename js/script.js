@@ -71,29 +71,20 @@ function generateElementsArray(quantityVal, rangeMin, rangeMax) {
 			return resArray;
 			} else {
 
-				var message = document.createElement('div');
-				message.className = "alert shadow";
-				message.innerHTML = 
-				"<strong>Ошибка!</strong><br>неверный диапазон<br><span>(кликни меня)</span>";
-				document.body.insertBefore(message, document.body.firstChild);
-				
-				document.body.firstChild.onclick = function() {
-						message.parentNode.removeChild(message); 
-						};
+				var message = document.getElementsByClassName('alert')[0];
+				    message.style.cssText = "display: block;";
+                    message.onclick = function() {
+                        message.style.cssText = "display: none;";
+                    }
 				return false;
-				   }
+				}
 		} else {
-			
-			var message = document.createElement('div');
-				message.className = "alert-big shadow";
-				message.innerHTML = 
-				  "<strong>Ошибка!</strong><br>недопустимое количество.<br>Введите от 2 до 24<br><span>(кликни меня)</span>";
-				document.body.insertBefore(message, document.body.firstChild);
-				
-				document.body.firstChild.onclick = function() {
-						message.parentNode.removeChild(message); 
-						};
 
+            var message = document.getElementsByClassName('alert-big')[0];
+                    message.style.cssText = "display: block;";
+                    message.onclick = function() {
+                        message.style.cssText = "display: none;";
+                    }
 			return false;
 			}
 }
